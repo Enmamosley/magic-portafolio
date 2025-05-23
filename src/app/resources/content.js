@@ -62,7 +62,7 @@ const home = {
   },
   subline: (
     <>
-      Soy Enmanoell, diseñador web y administrador de sistemas en <InlineCode>Sociedad Securitas</InlineCode>.
+      Soy Enmanoell, diseñador web y administrador de sistemas en Sociedad Securitas.
       <br /> Después del trabajo, desarrollo mis propios proyectos.
     </>
   ),
