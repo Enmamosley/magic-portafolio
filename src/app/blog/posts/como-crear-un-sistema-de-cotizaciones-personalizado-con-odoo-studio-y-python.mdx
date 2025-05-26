@@ -1,0 +1,52 @@
+---
+title: "Cómo crear un sistema de cotizaciones personalizado con Odoo Studio y Python"
+summary: "Aprende a extender Odoo ERP para adaptar tus procesos comerciales usando automatizaciones, campos calculados y código Python."
+publishedAt: "2025-05-25"
+tag: "Odoo"
+---
+
+## Introducción
+
+Odoo es una poderosa plataforma ERP, pero muchas veces es necesario adaptarla a flujos específicos del negocio. En este artículo te mostraré cómo crear un sistema de cotizaciones personalizado usando Odoo Studio y algunas líneas de Python.
+
+## Escenario común
+
+Imagina que tu equipo de ventas necesita enviar cotizaciones para servicios marítimos, aéreos y terrestres, y que el cálculo del margen de utilidad (MUB) depende de varios campos internos como el precio de compra, el IPA y otros gastos.
+
+## Paso 1: Crear los campos necesarios
+
+Con Odoo Studio, puedes agregar campos como:
+- `x_precio_compra`
+- `x_ipa`
+- `x_gastos`
+- `x_margen_utilidad` (campo calculado)
+
+## Paso 2: Automatizar el cálculo en Python
+
+Puedes usar una acción automatizada en "Automatizaciones del servidor" para calcular el MUB:
+
+```python
+for record in records:
+    precio_venta = record.price_unit or 0.0
+    precio_compra = record.x_precio_compra or 0.0
+    ipa = record.x_ipa or 0.0
+    gastos = record.x_gastos or 0.0
+    record['x_margen_utilidad'] = (precio_venta - (precio_compra + ipa + gastos)) * record.product_uom_qty
+```
+
+## Paso 3: Asociar proyectos automáticamente
+
+Puedes crear una regla para que cada cotización genere una tarea en un proyecto según el tipo de servicio:
+
+```python
+if record.product_id.name == 'Marítimo':
+    proyecto = env['project.project'].search([('name', '=', 'Marítimo')], limit=1)
+    env['project.task'].create({
+        'name': record.name,
+        'project_id': proyecto.id,
+    })
+```
+
+## Conclusión
+
+Con Odoo Studio y Python, puedes personalizar profundamente tu flujo de cotizaciones sin necesidad de desarrollar un módulo completo. Esto permite iterar rápido y adaptar el sistema a tus necesidades reales.

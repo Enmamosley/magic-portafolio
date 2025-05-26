@@ -1,0 +1,42 @@
+---
+title: "Creando plugins para WordPress desde cero: guía para automatizar tareas comunes"
+summary: "Aprende a desarrollar tu primer plugin de WordPress para automatizar tareas como envíos de correo o generación de PDFs."
+publishedAt: "2025-05-25"
+tag: "WordPress"
+---
+
+## Introducción
+
+WordPress no es solo para blogs. Gracias a los plugins, puedes extenderlo casi sin límites. Hoy te enseño cómo crear uno básico.
+
+## Paso 1: Estructura mínima de un plugin
+
+Crea una carpeta en `wp-content/plugins/mi-plugin/` con un archivo `mi-plugin.php`:
+
+```php
+<?php
+/*
+Plugin Name: Mi Primer Plugin
+*/
+add_action('init', function() {
+  error_log("¡Hola desde mi primer plugin!");
+});
+```
+
+## Paso 2: Agrega funcionalidad útil
+
+Ejemplo: enviar un correo cada vez que se publica una entrada:
+
+```php
+add_action('publish_post', function($post_ID) {
+  wp_mail('admin@miweb.com', 'Nuevo post', 'Se ha publicado un nuevo post.');
+});
+```
+
+## Paso 3: Activación y limpieza
+
+Agrega funciones `register_activation_hook` y `register_deactivation_hook` para instalar y limpiar datos si es necesario.
+
+## Conclusión
+
+Con solo unos archivos puedes empezar a crear automatizaciones que potencien tu sitio WordPress.

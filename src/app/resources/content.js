@@ -7,19 +7,19 @@ const person = {
     return `${this.firstName} ${this.lastName}`;
   },
   role: "Diseñador Web",
-  avatar: "/images/avatar.jpg",
+  avatar: "/images/avatar.webp",
   email: "enmanoell@mosley.mx",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  location: "America/Monterrey", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["Español", "Ingles"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Suscribete a mi Newsletter</>,
   description: (
     <>
-     Ocasionalmente escribo sobre diseño y tecnología, y comparto reflexiones sobre la intersección de la creatividad y la ingeniería..
-    </>
+     Ocasionalmente escribo sobre diseño y tecnología, y comparto reflexiones acerca de la intersección entre la creatividad y la ingeniería.
+     </>
   ),
 };
 
@@ -51,13 +51,13 @@ const social = [
 const home = {
   path: "/",
   image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  label: "Inicio",
+  title: `${person.name}'s Portafolio`,
+  description: `Portafolio web que muestra mi trabajo como ${person.role}`,
+  headline: <>Construyendo puentes entre el diseño y el código</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
+    title: <>Protecto reciente: <strong className="ml-4">Odoo 18 ERP</strong></>,
     href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
@@ -70,8 +70,8 @@ const home = {
 
 const about = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
+  label: "  Sobre mí",
+  title: ` Sobre – ${person.name}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
@@ -81,60 +81,59 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Introducción",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Mezclando las mejores tacticas del mercados y 7 años de experiencia como 
+        independiente, puedo ofrecer una soluciones altamente especializadas para 
+        casi cualquier proyecto.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Experiencia",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Sociedad Securitas",
+        timeframe: "2020 - Presente",
+        role: "Diseñador Web y Administrador e implemntador de Sistemas",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Me he encargado de diseñar, desarrollar e implentar sitios web para clientes, incluyendo la
+            implementación de Odoo ERP desde 0.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Durante mi tiempo en la empresa, he trabajado en más de 30 proyectos de principio a fin. He gestionado servidores
+            y he implementado soluciones de software personalizadas para satisfacer las necesidades de los clientes,
+            lo que ha resultado en una mejora significativa en la eficiencia y la productividad.
           </>,
+          <>
+            He gestionado servidores tanto en entornos Windows como Linux, asegurando la seguridad y el rendimiento óptimo de
+            las aplicaciones. He trabajado con bases de datos SQL y NoSQL, optimizando consultas y mejorando el rendimiento. 
+            He realizando migraciones masivas de datos para asegurar la continuidad operativa y la integridad de la información.
+          </>      
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+          
+        ]
+,
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "InMedia",
+        timeframe: "2016 - 2019",
+        role: "Diseñador Grafico",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            He trabajado en proyectos que abarcan desde la creación de contenido visual para redes sociales hasta la producción de
+            videos promocionales y documentales. Mi enfoque se centra en contar historias que emocionan y conectan con la audiencia.
+            
           </>,
         ],
         images: [],
@@ -142,53 +141,99 @@ const about = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: false, // set to false to hide this section
+    title: "Estudios",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Univeridad Autónoma de Nuevo León",
+        timeframe: "2019 - 2024",
+        description: <>Lic. En Multimedia y Animación Digital.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Univeridad Autónoma de Nuevo León",
+        timeframe: "2019 - 2023",
+        description: <>Lic. En Multimedia y Animación Digital.</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Habilidades técnicas",
     skills: [
+            {
+        title: "Wordpress",
+        description: <>Experto en la creación de cualquier tipo de sitio web en Wordpress, desde blogs hasta tiendas en linea, asi como la creación y modificación de Plugins</>,
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+{
+  title: "Python",
+  description: <>Soy capaz de crear scripts y aplicaciones en Python, incluyendo la creación de módulos para Odoo ERP.</>,
+  // optional: leave the array empty if you don't want to display images
+  images: [],
+},
+{
+        title: "Odoo ERP",
+        description: <>Experto en la implementación y personalización de Odoo, y la migración de datos.</>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+                    {
+            src: "/images/projects/project-01/I.webp",
+            alt: "Implementación",
+            width: 12,
+            height: 15,
+          },
+          {
+            src: "/images/projects/project-01/F.webp",
+            alt: "Funcional",
+            width: 12,
+            height: 15,
+          },
+          {
+            src: "/images/projects/project-01/TF.webp",
+            alt: "Tecnico Funcional",
+            width: 12,
+            height: 15,
+          },
+
+        ],
+      },
       {
         title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        description: <>Soy capaz de crear prototipos en Figma sin problema alguno. Como diseñador web Figma es una parte esencial en mi trabajo diario.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
+            src: "/images/projects/project-01/tedx.webp",
+            alt: "Tedx Jardines de Pereda",
+            width: 19,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
+            src: "/images/projects/project-01/tedx2.webp",
+            alt: "Tedx Jardines de Pereda",
+            width: 19,
             height: 9,
           },
         ],
       },
       {
         title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        description: <>Puedo llevar cualquier diseño a next.js, usando herramientas de ultima generación para sitios y apps veloces.
+</>,
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+
+        ],
+        
+      },
+            {
+        title: "Adobe Suite",
+        description: <>Durante mi epoca como diseñador grafico aprendi a usar las principales herramientas de adobe suite, tales como Photoshop, Illustrator, Premier y After Effects.
+</>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+
         ],
       },
     ],
@@ -198,17 +243,17 @@ const about = {
 const blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  title: "Escribiendo sobre diseño y tecnología...",
+  description: `Lee ahora lo que he estado publicando`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
 
 const work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  label: "Proyectos",
+  title: `Proyectos – ${person.name}`,
+  description: `Diseñado y desarrollado por ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
