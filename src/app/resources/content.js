@@ -58,12 +58,12 @@ const home = {
   featured: {
     display: true,
     title: <>Protecto reciente: <strong className="ml-4">Odoo 18 ERP</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "work/odooss",
   },
   subline: (
     <>
-      Soy Enmanoell, diseñador web y administrador de sistemas en Sociedad Securitas.
-      <br /> Después del trabajo, desarrollo mis propios proyectos.
+      Soy Enmanoell Mosley: diseñador web, implementador de sistemas y <br/>
+      administrador digital enfocado en crear soluciones que realmente funcionan.
     </>
   ),
 };
@@ -105,9 +105,7 @@ const about = {
           <>He diseñado, desarrollado e implementado sitios web a medida para clientes de distintos sectores, incluyendo la implementación completa de sistemas ERP con Odoo desde cero.</>,
            <>A lo largo de mi carrera he liderado más de 30 proyectos de principio a fin, gestionando desde la planificación hasta la entrega. He implementado soluciones de software personalizadas que han mejorado la eficiencia operativa y la productividad de los equipos.          </>,
             <>Tengo experiencia administrando servidores en entornos Windows y Linux, asegurando un rendimiento estable y seguro. Además, he trabajado con bases de datos SQL y NoSQL, optimizando consultas, mejorando tiempos de respuesta y realizando migraciones masivas de datos sin comprometer la integridad de la información.</>,
-            <>Mi enfoque siempre ha sido ofrecer soluciones escalables y adaptadas a las necesidades reales del cliente, integrando diseño y desarrollo para lograr experiencias digitales sólidas y funcionales.</>,
-
-          
+            <>Mi enfoque siempre ha sido ofrecer soluciones escalables y adaptadas a las necesidades reales del cliente, integrando diseño y desarrollo para lograr experiencias digitales sólidas y funcionales.</>,     
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
