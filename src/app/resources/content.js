@@ -88,10 +88,8 @@ const about = {
     display: true,
     title: "Introducción",
     description: (
-      <>
-        Mezclando las mejores tacticas del mercados y 7 años de experiencia como 
-        independiente, puedo ofrecer una soluciones altamente especializadas para 
-        casi cualquier proyecto.
+      <>"Durante más de 7 años he perfeccionado las mejores tácticas del mercado para 
+        ofrecer soluciones a medida que impulsan el éxito de cualquier proyecto."
       </>
     ),
   },
