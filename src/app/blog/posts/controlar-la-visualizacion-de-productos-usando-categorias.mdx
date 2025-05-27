@@ -1,0 +1,64 @@
+---
+title: "Entorno multiempresa: Controla la visualización de productos usando categorias"
+summary: "Implementa una solución robusta para ocultar productos entre empresas según la categoría de producto y su empresa asignada, utilizando reglas de seguridad (ir.rule) y campos personalizados en Odoo 18."
+publishedAt: "2025-05-27"
+image: "/images/og/p3.avif"
+tag: "Odoo"
+---
+
+## Introducción
+   En entornos multiempresa, puede ser necesario que ciertos productos sean visibles solo para usuarios de empresas específicas, si bien odoo tiene la opción para que cada producto se muestre en determinada empresa, esta limitado a una sola empresa.   
+
+   Al final esta limitante nos obligaria a duplicar productos o mostrar todos los productos a todas las empresas.
+
+   La unica solución viable es usar Studio para que la visibilidad se controle desde las categorias.
+
+     Entonces haremos lo siguiente:
+    - Utilizaremos categorías de productos para filtar que empresas pueden ver los productos
+    - Crearemos un campo personalizado para seleccionar las empresas permitidas
+    - Aplicaremos reglas de registro (ir.rule) para controlar restricción de la vista.
+  
+  Haciendo esto lograremos limitar la visibilidad de los productos según la empresa.
+
+## Casos de uso
+    - Manejar catálogos separados entre múltiples empresas
+    - Evitar errores de venta de productos no correspondientes a una empresa
+    - Simplificar búsqueda de productos y reducir errores de selección
+
+## Pre requisitos:
+  - Modo desarrollador habilitado en Odoo
+  - Permisos de administrador o superusuario
+  - Base con modo multiempresa activo
+
+## Paso a Paso:
+  - Paso 1: Crear campo "Empresas permitidas" en categorías
+      - Ir a Productos → Configuración → Categorías de producto o normalmente https://www.tusitio.odoo.com/odoo/product-categories
+      - Abre una categoria.
+      - Activa el modo desarollador usando la extensión oficial de odoo para chrome.
+      - Abre Studio.
+      - Agregar un campo many2many con el nombre "x_studio_empresas_permitidas".
+      - Guarda y da click en el boton "MAS" que se encuentra en la parte inferior del tu campo.
+      - Busca el campo modelo relacionado y añade ahi "res.company".
+      - Guardar y cierra Studio
+
+  - Paso 2:  Crear regla de seguridad para product.template
+        - Ir a Ajustes → Técnico → Seguridad → Reglas de registro
+      - Crear nueva regla:
+         - Nombre: Filtrar productos por empresa asignada a categoría
+         - modelo: product.template o Producto
+         - grupo: Usuarios internos u otros grupos aplicables o Lo puedes dejar vacio
+         - domain: <CodeBlock compact marginBottom="16" codeInstances={[ { code: "['|', ('categ_id.x_studio_empresas_permitidas', '=', False), ('categ_id.x_studio_empresas_permitidas', 'in', [user.company_id.id])]", language: "bash" } ]} />
+         - Guardamos y todo esta listo.
+
+      ¿Que conseguimos con esto?:
+        - Todas las empresas pueden ver los productos si la catagoria no tiene empresas seleccionadas.
+        - Si la categoria tiene una o mas empresas activas está en la lista  solo ellas podran ver esas categorias.
+
+## Consideraciones:
+  - Afecta a módulos: ventas, compras, inventario, APIs, etc.
+  - Campo many2many permite control flexible por categoría
+  - Reutilizable para otras reglas si es necesario
+  - No requiere duplicar productos ni usar multicategorías
+
+## Conclusion:
+Con este enfoque limpio, seguro y compatible con Odoo 18. Ofrecemos experiencia profesional en ambientes multiempresa, evitamos errores operativos y simplificamos gestión de productos sin duplicación.

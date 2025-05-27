@@ -57,12 +57,12 @@ const home = {
   headline: <>Diseño que inspira, código que funciona.</>,
   featured: {
     display: true,
-    title: <>Protecto reciente: <strong className="ml-4">Odoo 18 ERP</strong></>,
+    title: <>Proyecto reciente: <strong className="ml-4">Odoo 18 ERP</strong></>,
     href: "work/odooss",
   },
   subline: (
     <>
-      Soy Enmanoell Mosley: diseñador web, implementador de sistemas y <br/>
+      Soy Enmanoell Mosley, diseñador web, implementador de sistemas y <br/>
       administrador digital enfocado en crear soluciones que realmente funcionan.
     </>
   ),
@@ -81,8 +81,8 @@ const about = {
     display: true,
   },
   calendar: {
-    display: false,
-    link: "https://cal.com",
+    display: true,
+    link: "https://clientes.mosley.mx/book/5f91566e",
   },
   intro: {
     display: true,
@@ -97,6 +97,23 @@ const about = {
     display: true, // set to false to hide this section
     title: "Experiencia",
     experiences: [
+      {
+        company: "Mosley Digital Services",
+        timeframe: "2023 - Presente",
+        role: "Fundador y administrador Digital",
+        achievements: [
+          <>Fundé y gestiono una firma digital especializada en el desarrollo de sitios web, automatización de procesos empresariales y transformación digital para empresas en múltiples sectores </>,
+            <>Desarrollo soluciones con tecnologías modernas como Next.js y Strapi, optimizando rendimiento, escalabilidad y experiencia de usuario. También he creado herramientas internas y extensiones de navegador para flujos de trabajo específicos.</>,
+            <>Implemento y personalizo Odoo ERP para empresas medianas y grandes, diseñando flujos de negocio completos con automatizaciones, migraciones masivas, integraciones externas y ajustes contables y logísticos multiempresa.</>,
+            <>Combino habilidades técnicas y de diseño para entregar experiencias digitales completas, desde el diseño en Figma hasta la implementación backend, priorizando eficiencia, escalabilidad y mantenimiento a largo plazo.</>, 
+            <>Desarrollo sitios web altamente personalizables y facil de usar para el cleinte, usando Wordpress como cms, enfocado para sitios pequeños o que requieren alto nivel de personalizació sin llegar a tocar el codigo del sitio. </>,    
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          
+        ]
+,
+      },
       {
         company: "Sociedad Securitas",
         timeframe: "2020 - Presente",
