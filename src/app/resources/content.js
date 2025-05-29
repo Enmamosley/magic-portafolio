@@ -57,8 +57,8 @@ const home = {
   headline: <>Diseño que inspira, código que funciona.</>,
   featured: {
     display: true,
-    title: <>Proyecto reciente: <strong className="ml-4">Odoo 18 ERP</strong></>,
-    href: "work/odooss",
+    title: <>Acceso al <strong className="ml-4"> Portal de Clientes</strong></>,
+    href: "https://clientes.mosley.mx",
   },
   subline: (
     <>
