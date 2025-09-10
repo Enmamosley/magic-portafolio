@@ -15,7 +15,7 @@ type ThemeProviderState = {
 };
 
 const initialState: ThemeProviderState = {
-  theme: "system",
+  theme: "dark",
   resolvedTheme: 'dark',
   setTheme: () => null,
 };
@@ -23,16 +23,19 @@ const initialState: ThemeProviderState = {
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
-  // Start with system theme on server, will be updated on client
-  const [theme, setTheme] = useState<Theme>("system");
+  // Start with dark theme by default
+  const [theme, setTheme] = useState<Theme>("dark");
   const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('dark');
   const [mounted, setMounted] = useState(false);
 
-  // Initialize theme from localStorage on mount
+  // Initialize theme from localStorage on mount, default to dark
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as Theme;
     if (savedTheme) {
       setTheme(savedTheme);
+    } else {
+      // Set dark theme as default if no saved preference
+      setTheme("dark");
     }
     setMounted(true);
   }, []);
