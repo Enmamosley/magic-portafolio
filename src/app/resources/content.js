@@ -69,7 +69,7 @@ const home = {
 };
 
 const about = {
-  path: "/about",
+  path: "/sobre-mi",
   label: "  Sobre mí",
   title: ` Sobre – ${person.name}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
@@ -255,7 +255,7 @@ const blog = {
 };
 
 const work = {
-  path: "/work",
+  path: "/proyectos",
   label: "Proyectos",
   title: `Proyectos – ${person.name}`,
   description: `Diseñado y desarrollado por ${person.name}`,

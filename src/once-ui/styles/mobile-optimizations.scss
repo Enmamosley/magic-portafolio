@@ -1,0 +1,96 @@
+/* Optimizaciones específicas para dispositivos móviles */
+
+/* Mejoras generales de rendimiento para dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+    /* Mejora el momentum scrolling en iOS */
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Reduce las animaciones complejas en dispositivos móviles */
+    .revealFx {
+        transition-duration: 1s !important;
+        
+        /* Desactiva blur en dispositivos móviles para mejor rendimiento */
+        &.hidden {
+            filter: none;
+            opacity: 0.3;
+        }
+        
+        &.revealed {
+            filter: none;
+            opacity: 1;
+        }
+    }
+
+    /* Optimizaciones específicas para el scroll */
+    html, body {
+        /* Previene problemas de scroll elástico en iOS */
+        overscroll-behavior: none;
+        /* Mejora la respuesta táctil */
+        touch-action: pan-y;
+        /* Asegura scroll suave pero más rápido en móviles */
+        scroll-behavior: smooth;
+    }
+
+    /* Mejora el rendimiento de elementos con animaciones */
+    [style*="transform"], 
+    .revealFx {
+        /* Fuerza aceleración por hardware */
+        transform: translateZ(0);
+        /* Optimiza las capas de compositing */
+        will-change: transform;
+    }
+}
+
+/* Específico para iOS Safari */
+@supports (-webkit-touch-callout: none) {
+    body {
+        /* Previene el bounce effect en iOS */
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-y: none;
+        /* Mejora la experiencia de scroll */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    /* Reduce animaciones pesadas en iOS */
+    .revealFx {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+    }
+}
+
+/* Optimizaciones para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    /* Reduce la complejidad visual en móviles */
+    .revealFx {
+        mask-size: 200% 100% !important;
+        transition-duration: 1.2s !important;
+    }
+
+    /* Mejora el scrolling en contenedores específicos */
+    main, [role="main"], section {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+}
+
+/* Para dispositivos con batería baja o rendimiento limitado */
+@media (prefers-reduced-motion: reduce) {
+    .revealFx {
+        transition: opacity 0.3s ease !important;
+        mask-image: none !important;
+        filter: none !important;
+        
+        &.hidden {
+            opacity: 0;
+        }
+        
+        &.revealed {
+            opacity: 1;
+        }
+    }
+}

@@ -4,6 +4,7 @@ import "@/once-ui/tokens/index.scss";
 import classNames from "classnames";
 
 import { Footer, Header, RouteGuard } from "@/components";
+import { MobileScrollOptimizer } from "@/components/MobileScrollOptimizer";
 import { baseURL, effects, style, font, home } from "@/app/resources";
 
 import { Background, Column, Flex, ThemeProvider, ToastProvider } from "@/once-ui/components";
@@ -47,6 +48,14 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       )}
     >
       <head>
+        {/* Meta tags para optimizar scroll en dispositivos móviles */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+        <meta name="format-detection" content="telephone=no" />
+        {/* Optimizaciones para iOS Safari */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-touch-fullscreen" content="yes" />
+        
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -70,6 +79,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       </head>
       <ThemeProvider>
         <ToastProvider>
+          <MobileScrollOptimizer />
           <Column style={{ minHeight: "100vh" }} as="body" fillWidth margin="0" padding="0">
             <Background
               position="fixed"

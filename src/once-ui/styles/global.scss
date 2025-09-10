@@ -4,6 +4,24 @@
     scroll-behavior: smooth;
 }
 
+html {
+    /* Mejora el scroll en dispositivos móviles iOS */
+    -webkit-overflow-scrolling: touch;
+    /* Previene problemas de scroll en móviles */
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    /* Asegura un scroll suave en todos los navegadores */
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Mejora el momentum scrolling en iOS */
+    -webkit-overflow-scrolling: touch;
+    /* Previene el rebote de scroll en iOS */
+    overscroll-behavior-y: none;
+    /* Mejora la experiencia táctil */
+    touch-action: pan-y;
+}
+
 h1, h2, h3, h4, h5, h6 {
     scroll-margin-top: var(--static-space-80);
 }

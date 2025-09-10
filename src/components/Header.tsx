@@ -79,37 +79,37 @@ export const Header = () => {
                 <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
               )}
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
-              {routes["/about"] && (
+              {routes["/sobre-mi"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="person"
-                    href="/about"
+                    href="/sobre-mi"
                     label={about.label}
-                    selected={pathname === "/about"}
+                    selected={pathname === "/sobre-mi"}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="person"
-                    href="/about"
-                    selected={pathname === "/about"}
+                    href="/sobre-mi"
+                    selected={pathname === "/sobre-mi"}
                   />
                 </>
               )}
-              {routes["/work"] && (
+              {routes["/proyectos"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="grid"
-                    href="/work"
+                    href="/proyectos"
                     label={work.label}
-                    selected={pathname.startsWith("/work")}
+                    selected={pathname.startsWith("/proyectos")}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="grid"
-                    href="/work"
-                    selected={pathname.startsWith("/work")}
+                    href="/proyectos"
+                    selected={pathname.startsWith("/proyectos")}
                   />
                 </>
               )}

@@ -2,13 +2,13 @@
 
 import {
   AvatarGroup,
-  Carousel,
   Column,
   Flex,
   Heading,
   SmartLink,
   Text,
 } from "@/once-ui/components";
+import { ClickableCarousel } from "./ClickableCarousel";
 
 interface ProjectCardProps {
   href: string;
@@ -32,7 +32,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <Column fillWidth gap="m">
-      <Carousel
+      <ClickableCarousel
+        href={href.replace("/work/", "/proyectos/")}
         sizes="(max-width: 960px) 100vw, 960px"
         images={images.map((image) => ({
           src: image,
@@ -67,7 +68,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 <SmartLink
                   suffixIcon="arrowRight"
                   style={{ margin: "0", width: "fit-content" }}
-                  href={href}
+                  href={href.replace("/work/", "/proyectos/")}
                 >
                   <Text variant="body-default-s">Ver caso</Text>
                 </SmartLink>
