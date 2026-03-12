@@ -104,11 +104,12 @@ const about = {
         timeframe: "2023 - Presente",
         role: "Fundador & Director Digital",
         achievements: [
-          <>Fundé mi propia firma digital enfocada en desarrollo web, automatización de procesos e implementación de sistemas para empresas de distintos sectores.</>,
-          <>Desarrollo soluciones con tecnologías modernas como Next.js, Astro y Strapi, optimizando rendimiento, escalabilidad y experiencia de usuario. También he creado herramientas internas y extensiones de navegador para flujos de trabajo específicos.</>,
-          <>Implemento y personalizo Odoo ERP para empresas medianas y grandes, diseñando flujos de negocio completos con automatizaciones, migraciones masivas, integraciones externas y ajustes contables y logísticos multiempresa.</>,
-          <>Combino habilidades técnicas y de diseño para entregar experiencias digitales completas, desde el diseño en Figma hasta la implementación backend, priorizando eficiencia, escalabilidad y mantenimiento a largo plazo.</>,
-          <>Desarrollo sitios web con WordPress para clientes que necesitan alto nivel de personalización sin tocar código, y con Next.js/Astro para proyectos que demandan máximo rendimiento.</>,
+          <>Fundé mi firma digital enfocada en desarrollo web, sistemas a medida e implementación de ERP para empresas de distintos sectores. Actualmente gestiono más de 15 proyectos activos.</>,
+          <>Desarrollé un <strong>TMS (Transport Management System)</strong> completo con Laravel 11, Livewire 3 y PostgreSQL — más de 50,000 líneas de código, 80+ componentes, facturación CFDI 4.0 con Carta Porte 3.1 e integración con Facturapi.</>,
+          <>Construí un <strong>sistema de permisos de trabajo</strong> multi-rol para Pabellón M con aprobación multi-nivel, clasificación automática de riesgo, generación y lectura de QR, y monitoreo en tiempo real.</>,
+          <>Creé <strong>plugins open-source para Bagisto 2.x</strong>: facturación electrónica CFDI 4.0 con autoservicio al cliente, y gestión avanzada de inventario con códigos de barras, transferencias entre almacenes y alertas de stock.</>,
+          <>Desarrollo sitios web de alto rendimiento con <strong>Astro y Next.js</strong> para clientes como Martiel KCM, Tank Global, Ticmans, Real Transport y Fletes LM, incluyendo animaciones avanzadas con GSAP ScrollTrigger.</>,
+          <>Implemento y personalizo <strong>Odoo ERP</strong> para empresas medianas y grandes, con flujos multiempresa, migraciones masivas, automatizaciones y ajustes contables y logísticos.</>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
