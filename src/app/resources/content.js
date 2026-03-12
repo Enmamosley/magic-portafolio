@@ -6,19 +6,19 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Diseñador Web",
+  role: "Desarrollador Web & Administrador Digital",
   avatar: "/images/avatar.webp",
   email: "enmanoell@mosley.mx",
   location: "America/Monterrey", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["Español", "Ingles"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["Español", "Inglés"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
   display: true,
-  title: <>Suscribete a mi Newsletter</>,
+  title: <>Suscríbete a mi Newsletter</>,
   description: (
     <>
-     Ocasionalmente escribo sobre diseño y tecnología, y comparto reflexiones acerca de la intersección entre la creatividad y la ingeniería.
+     Escribo sobre desarrollo web, automatización y transformación digital. Comparto lo que aprendo construyendo soluciones reales para empresas.
      </>
   ),
 };
@@ -52,27 +52,27 @@ const home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Inicio",
-  title: `${person.name}'s Portafolio`,
-  description: `Portafolio web que muestra mi trabajo como ${person.role}`,
+  title: `${person.name} — Portafolio`,
+  description: `Portafolio de ${person.name}: desarrollo web, implementación de sistemas y administración digital.`,
   headline: <>Diseño que inspira, código que funciona.</>,
   featured: {
     display: true,
-    title: <>Acceso al <strong className="ml-4"> Portal de Clientes</strong></>,
-    href: "https://clientes.mosley.mx",
+    title: <>Conoce <strong className="ml-4">Mosley Digital Services</strong></>,
+    href: "https://mosley.mx",
   },
   subline: (
     <>
-      Soy Enmanoell Mosley, diseñador web, implementador de sistemas y <br/>
-      administrador digital enfocado en crear soluciones que realmente funcionan.
+      Soy Enmanoell Mosley. Desarrollo sitios web, implemento sistemas ERP y<br/>
+      lidero <strong>Mosley Digital Services</strong>, mi firma de soluciones digitales.
     </>
   ),
 };
 
 const about = {
   path: "/sobre-mi",
-  label: "  Sobre mí",
-  title: ` Sobre – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "Sobre mí",
+  title: `Sobre – ${person.name}`,
+  description: `${person.name}: desarrollador web, implementador de sistemas y fundador de Mosley Digital Services.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -88,8 +88,10 @@ const about = {
     display: true,
     title: "Introducción",
     description: (
-      <>Durante más de 7 años he perfeccionado las mejores tácticas del mercado para 
-        ofrecer soluciones a medida que impulsan el éxito de cualquier proyecto.
+      <>Con más de 7 años de experiencia en desarrollo web, diseño e implementación de sistemas,
+        he trabajado con empresas de distintos sectores creando soluciones digitales que funcionan.
+        En 2023 fundé <strong>Mosley Digital Services</strong>, donde canalizo todo lo que he aprendido
+        para ayudar a negocios a crecer con tecnología.
       </>
     ),
   },
@@ -100,13 +102,13 @@ const about = {
       {
         company: "Mosley Digital Services",
         timeframe: "2023 - Presente",
-        role: "Fundador y administrador Digital",
+        role: "Fundador & Director Digital",
         achievements: [
-          <>Fundé y gestiono una firma digital especializada en el desarrollo de sitios web, automatización de procesos empresariales y transformación digital para empresas en múltiples sectores </>,
-            <>Desarrollo soluciones con tecnologías modernas como Next.js y Strapi, optimizando rendimiento, escalabilidad y experiencia de usuario. También he creado herramientas internas y extensiones de navegador para flujos de trabajo específicos.</>,
-            <>Implemento y personalizo Odoo ERP para empresas medianas y grandes, diseñando flujos de negocio completos con automatizaciones, migraciones masivas, integraciones externas y ajustes contables y logísticos multiempresa.</>,
-            <>Combino habilidades técnicas y de diseño para entregar experiencias digitales completas, desde el diseño en Figma hasta la implementación backend, priorizando eficiencia, escalabilidad y mantenimiento a largo plazo.</>, 
-            <>Desarrollo sitios web altamente personalizables y facil de usar para el cleinte, usando Wordpress como cms, enfocado para sitios pequeños o que requieren alto nivel de personalizació sin llegar a tocar el codigo del sitio. </>,    
+          <>Fundé mi propia firma digital enfocada en desarrollo web, automatización de procesos e implementación de sistemas para empresas de distintos sectores.</>,
+          <>Desarrollo soluciones con tecnologías modernas como Next.js, Astro y Strapi, optimizando rendimiento, escalabilidad y experiencia de usuario. También he creado herramientas internas y extensiones de navegador para flujos de trabajo específicos.</>,
+          <>Implemento y personalizo Odoo ERP para empresas medianas y grandes, diseñando flujos de negocio completos con automatizaciones, migraciones masivas, integraciones externas y ajustes contables y logísticos multiempresa.</>,
+          <>Combino habilidades técnicas y de diseño para entregar experiencias digitales completas, desde el diseño en Figma hasta la implementación backend, priorizando eficiencia, escalabilidad y mantenimiento a largo plazo.</>,
+          <>Desarrollo sitios web con WordPress para clientes que necesitan alto nivel de personalización sin tocar código, y con Next.js/Astro para proyectos que demandan máximo rendimiento.</>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -117,12 +119,12 @@ const about = {
       {
         company: "Sociedad Securitas",
         timeframe: "2020 - Presente",
-        role: "Diseñador Web y Administrador e implemntador de Sistemas",
+        role: "Diseñador Web & Implementador de Sistemas",
         achievements: [
-          <>He diseñado, desarrollado e implementado sitios web a medida para clientes de distintos sectores, incluyendo la implementación completa de sistemas ERP con Odoo desde cero.</>,
-           <>A lo largo de mi carrera he liderado más de 30 proyectos de principio a fin, gestionando desde la planificación hasta la entrega. He implementado soluciones de software personalizadas que han mejorado la eficiencia operativa y la productividad de los equipos.          </>,
-            <>Tengo experiencia administrando servidores en entornos Windows y Linux, asegurando un rendimiento estable y seguro. Además, he trabajado con bases de datos SQL y NoSQL, optimizando consultas, mejorando tiempos de respuesta y realizando migraciones masivas de datos sin comprometer la integridad de la información.</>,
-            <>Mi enfoque siempre ha sido ofrecer soluciones escalables y adaptadas a las necesidades reales del cliente, integrando diseño y desarrollo para lograr experiencias digitales sólidas y funcionales.</>,     
+          <>Diseñé, desarrollé e implementé sitios web a medida para clientes de distintos sectores, incluyendo la implementación completa de sistemas ERP con Odoo desde cero.</>,
+          <>He liderado más de 30 proyectos de principio a fin, gestionando desde la planificación hasta la entrega. Implementé soluciones de software que mejoraron la eficiencia operativa de los equipos.</>,
+          <>Administro servidores en entornos Windows y Linux, trabajo con bases de datos SQL y NoSQL, y he realizado migraciones masivas de datos sin comprometer la integridad de la información.</>,
+          <>Mi enfoque ha sido siempre entregar soluciones escalables y adaptadas a necesidades reales, integrando diseño y desarrollo para experiencias digitales sólidas.</>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -133,13 +135,9 @@ const about = {
       {
         company: "InMedia",
         timeframe: "2016 - 2019",
-        role: "Diseñador Grafico",
+        role: "Diseñador Gráfico",
         achievements: [
-          <>
-            He trabajado en proyectos que abarcan desde la creación de contenido visual para redes sociales hasta la producción de
-            videos promocionales y documentales. Mi enfoque se centra en contar historias que emocionan y conectan con la audiencia.
-            
-          </>,
+          <>Creé contenido visual para redes sociales, videos promocionales y documentales. Aquí descubrí mi pasión por conectar diseño con tecnología, lo que me llevó al desarrollo web.</>,
         ],
         images: [],
       },
@@ -166,20 +164,20 @@ const about = {
     title: "Habilidades técnicas",
     skills: [
             {
-        title: "Wordpress",
-        description: <>Experto en la creación de cualquier tipo de sitio web en Wordpress, desde blogs hasta tiendas en linea, asi como la creación y modificación de Plugins</>,
+        title: "WordPress",
+        description: <>Experto en la creación de sitios web con WordPress, desde blogs hasta tiendas en línea, incluyendo desarrollo y modificación de plugins.</>,  
         // optional: leave the array empty if you don't want to display images
         images: [],
       },
 {
   title: "Python",
-  description: <>Soy capaz de crear scripts y aplicaciones en Python, incluyendo la creación de módulos para Odoo ERP.</>,
+  description: <>Desarrollo scripts, automatizaciones y módulos personalizados para Odoo ERP con Python.</>,  
   // optional: leave the array empty if you don't want to display images
   images: [],
 },
 {
         title: "Odoo ERP",
-        description: <>Experto en la implementación y personalización de Odoo, y la migración de datos.</>,
+        description: <>Implementación, personalización y migración de datos en Odoo. Diseño flujos de negocio completos con automatizaciones e integraciones.</>,  
         // optional: leave the array empty if you don't want to display images
         images: [
                     {
@@ -205,7 +203,7 @@ const about = {
       },
       {
         title: "Figma",
-        description: <>Soy capaz de crear prototipos en Figma sin problema alguno. Como diseñador web Figma es una parte esencial en mi trabajo diario.</>,
+        description: <>Diseño prototipos e interfaces en Figma como parte esencial de mi flujo de trabajo, del concepto al código.</>,  
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -223,9 +221,8 @@ const about = {
         ],
       },
       {
-        title: "Next.js",
-        description: <>Puedo llevar cualquier diseño a next.js, usando herramientas de ultima generación para sitios y apps veloces.
-</>,
+        title: "Next.js & Astro",
+        description: <>Llevo diseños a producción con frameworks modernos como Next.js y Astro, priorizando rendimiento y experiencia de usuario.</>,  
         // optional: leave the array empty if you don't want to display images
         images: [
 
@@ -234,8 +231,7 @@ const about = {
       },
             {
         title: "Adobe Suite",
-        description: <>Durante mi epoca como diseñador grafico aprendi a usar las principales herramientas de adobe suite, tales como Photoshop, Illustrator, Premier y After Effects.
-</>,
+        description: <>Manejo Photoshop, Illustrator, Premiere y After Effects desde mi etapa como diseñador gráfico, habilidades que sigo aplicando en cada proyecto.</>,  
         // optional: leave the array empty if you don't want to display images
         images: [
 
@@ -248,8 +244,8 @@ const about = {
 const blog = {
   path: "/blog",
   label: "Blog",
-  title: "Escribiendo sobre diseño y tecnología...",
-  description: `Lee ahora lo que he estado publicando`,
+  title: "Blog — Enmanoell Mosley",
+  description: `Artículos sobre desarrollo web, automatización y tecnología.`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
@@ -257,8 +253,8 @@ const blog = {
 const work = {
   path: "/proyectos",
   label: "Proyectos",
-  title: `Proyectos – ${person.name}`,
-  description: `Diseñado y desarrollado por ${person.name}`,
+  title: `Proyectos — ${person.name}`,
+  description: `Proyectos diseñados y desarrollados por ${person.name}.`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
