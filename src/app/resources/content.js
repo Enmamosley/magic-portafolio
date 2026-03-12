@@ -118,7 +118,7 @@ const about = {
       },
       {
         company: "Sociedad Securitas",
-        timeframe: "2020 - Presente",
+        timeframe: "2020 - Enero 2026",
         role: "Diseñador Web & Implementador de Sistemas",
         achievements: [
           <>Diseñé, desarrollé e implementé sitios web a medida para clientes de distintos sectores, incluyendo la implementación completa de sistemas ERP con Odoo desde cero.</>,
