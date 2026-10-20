@@ -105,10 +105,13 @@ const about = {
         role: "Fundador & Director Digital",
         achievements: [
           <>Fundé mi firma digital enfocada en desarrollo web, sistemas a medida e implementación de ERP para empresas de distintos sectores. Actualmente gestiono más de 15 proyectos activos.</>,
-          <>Desarrollé un <strong>TMS (Transport Management System)</strong> completo con Laravel 11, Livewire 3 y PostgreSQL — más de 50,000 líneas de código, 80+ componentes, facturación CFDI 4.0 con Carta Porte 3.1 e integración con Facturapi.</>,
+          <>Desarrollé <strong>Embarque.mx</strong>, un TMS (Transport Management System) completo con Laravel 11, Livewire 3 y PostgreSQL — más de 50,000 líneas de código, 80+ componentes, facturación CFDI 4.0 con Carta Porte 3.1 e integración con Facturapi.</>,
+          <>Construí el <strong>ERP de WCG</strong>, contratista de fibra óptica para Grupo Carso, con Next.js 16 y Supabase: órdenes R20, inventario multi-almacén, ciclo de vida de ONTs, conciliación CFDI 4.0 y reporte F200 para Telmex — 9 módulos en producción.</>,
+          <>Publiqué <strong>apps móviles iOS y Android</strong> con Expo y React Native: Montse Nails (reservas, historial y notificaciones push, disponible en App Store y Google Play) y la app de gestión interna de Pabellón M (tickets, inventario, accesos QR, RH y limpieza).</>,
           <>Construí un <strong>sistema de permisos de trabajo</strong> multi-rol para Pabellón M con aprobación multi-nivel, clasificación automática de riesgo, generación y lectura de QR, y monitoreo en tiempo real.</>,
           <>Creé <strong>plugins open-source para Bagisto 2.x</strong>: facturación electrónica CFDI 4.0 con autoservicio al cliente, y gestión avanzada de inventario con códigos de barras, transferencias entre almacenes y alertas de stock.</>,
-          <>Desarrollo sitios web de alto rendimiento con <strong>Astro y Next.js</strong> para clientes como Martiel KCM, Tank Global, Ticmans, Real Transport y Fletes LM, incluyendo animaciones avanzadas con GSAP ScrollTrigger.</>,
+          <>Lancé <strong>Mangateka</strong>, plataforma propia en Next.js para gestionar bibliotecas de manga con datos de MyAnimeList y AniList, estadísticas y extensión de Chrome.</>,
+          <>Desarrollo sitios web de alto rendimiento con <strong>Astro y Next.js</strong> para clientes como ABODÁ, Montse Nails, Martiel KCM, Tank Global, Ticmans, IRN Hosting y Fletes LM, y tiendas en línea mayoristas con <strong>WooCommerce</strong> como Surtipop y Detalle Perfecto.</>,
           <>Implemento y personalizo <strong>Odoo ERP</strong> para empresas medianas y grandes, con flujos multiempresa, migraciones masivas, automatizaciones y ajustes contables y logísticos.</>,
         ],
         images: [
@@ -228,7 +231,13 @@ const about = {
         images: [
 
         ],
-        
+
+      },
+      {
+        title: "React Native & Expo",
+        description: <>Desarrollo y publico apps móviles para iOS y Android con Expo, React Native y Supabase, desde el diseño hasta su publicación en App Store y Google Play.</>,
+        // optional: leave the array empty if you don't want to display images
+        images: [],
       },
             {
         title: "Adobe Suite",
